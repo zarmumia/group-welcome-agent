@@ -42,7 +42,7 @@ The admin reviews and clicks "Post" (≈10 seconds)
 | | Facebook's weekly welcome | This agent |
 |---|---|---|
 | Greeting | Fixed English template | Hebrew, with correct gender (ברוך הבא / ברוכה הבאה) |
-| Image | None | Branded image **with the new members' names** |
+| Image | None | A fixed branded welcome card (optionally with the new members' first names) |
 | Personal touch | Name tags only | A line per member, based on their public business info |
 | Next step | — | Points each member to an existing post that fits their field |
 | Frequency | Weekly | Weekly for small groups, daily for large ones |

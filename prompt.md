@@ -19,21 +19,22 @@ Work in Chrome on the group admin's computer (Claude in Chrome).
 3. **Hebrew grammar.** Infer gender from the first name only when it is clear
    ("ברוך הבא" / "ברוכה הבאה"). If unsure, or for several people, use "ברוכים הבאים".
 
-4. **Render a personalized image.** Download the `template/` folder from this repo and run:
+4. **The image.** By default, attach the fixed welcome card (`assets/welcome.png`, no names on it).
+   Optional: render a card with the new members' first names:
    ```bash
    npm i playwright
-   node template/render.js --names "מאור" --greeting "ברוך הבא" --out welcome-today.png
+   node template/render.js --names "יואב" --greeting "ברוך הבא" --out welcome-today.png
    ```
-   For several members: `--names "מיקי,מאור,רונית"` (greeting defaults to "ברוכים הבאים").
+   For several members: `--names "דנה,יואב,נועה"` (greeting defaults to "ברוכים הבאים").
 
 5. **Write the post.** Use the group's "Write welcome post" composer (it tags new members),
    or a regular post with @tags. Structure:
    - First line: the greeting.
    - One short, personal line per member, connected to their field, and when possible
      a pointer to an existing post in the group that fits them.
-     Example: "מאור, ראיתי שיש לך מאפייה. שווה להציץ בפוסט על תזכורות ללקוחות קבועים 👇"
+     Example: "יואב, ראיתי שיש לך מאפייה. שווה להציץ בפוסט על תזכורות ללקוחות קבועים 👇"
    - Last line: "אשמח שתספרו בכמה מילים: מה העסק שלכם, ומה הדבר האחד שהכי הייתם רוצים שירוץ לבד?"
-   - Attach the personalized image.
+   - Attach the image.
 
 6. **Stop before publishing.** Do NOT click "Post". Leave the composer open and notify the admin
    (in Hebrew): who joined, and that the post is ready for her click.
