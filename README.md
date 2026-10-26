@@ -41,7 +41,7 @@ The admin reviews and clicks "Post" (≈10 seconds)
 
 | | Facebook's weekly welcome | This agent |
 |---|---|---|
-| Greeting | Fixed English template | Hebrew, with correct gender (ברוך הבא / ברוכה הבאה) |
+| Greeting | Fixed English template | Hebrew, Arabic or English, with correct gender (ברוך הבא / ברוכה הבאה · أهلاً بكَ / أهلاً بكِ) |
 | Image | None | A fixed branded welcome card (optionally with the new members' first names) |
 | Personal touch | Name tags only | A line per member, based on their public business info |
 | Next step | — | Points each member to an existing post that fits their field |
@@ -49,10 +49,11 @@ The admin reviews and clicks "Post" (≈10 seconds)
 | Frequency | Weekly | Weekly for small groups, daily for large ones |
 
 <p align="center">
-  <img src="assets/welcome-en.png" width="340" alt="English welcome card">
-  <img src="assets/welcome.png" width="340" alt="Hebrew welcome card">
+  <img src="assets/welcome-en.png" width="260" alt="English welcome card">
+  <img src="assets/welcome.png" width="260" alt="Hebrew welcome card">
+  <img src="assets/welcome-ar.png" width="260" alt="Arabic welcome card">
 </p>
-<p align="center"><sub>Same card, English (LTR) and Hebrew (RTL)</sub></p>
+<p align="center"><sub>Same card in English (LTR), Hebrew and Arabic (RTL)</sub></p>
 
 ## Human in the loop, on purpose
 
@@ -64,7 +65,7 @@ so the last click stays human. The agent does the boring part; the admin keeps t
 | Path | What it is |
 |---|---|
 | `prompt.md` | The instruction the scheduled task runs each week |
-| `assets/welcome.png`, `assets/welcome-en.png` | Fixed welcome cards, Hebrew and English (1080×1080) |
+| `assets/welcome*.png` | Fixed welcome cards: Hebrew, English, Arabic (1080×1080) |
 | `template/` | HTML template + Playwright script to re-render the image in your own brand |
 
 ## Make it yours
@@ -74,6 +75,7 @@ so the last click stays human. The agent does the boring part; the admin keeps t
    npm i playwright
    node template/render.js              # Hebrew (RTL)
    node template/render.js --lang en    # English (LTR)
+   node template/render.js --lang ar    # Arabic (RTL)
    ```
 2. Put your group URL and texts in `prompt.md`.
 3. Create a weekly scheduled task in Claude with the prompt, on a computer with Claude in Chrome.
@@ -86,7 +88,8 @@ so the last click stays human. The agent does the boring part; the admin keeps t
 
 ---
 
-Font: [Assistant](https://fonts.google.com/specimen/Assistant) (SIL Open Font License).
+Fonts: [Assistant](https://fonts.google.com/specimen/Assistant) and [Cairo](https://fonts.google.com/specimen/Cairo) (SIL Open Font License).
+Arabic texts are a starting point; have a native speaker review them before using them with clients.
 Code: MIT.
 
 **Zarmumia · ופתאום הכול עובד.**

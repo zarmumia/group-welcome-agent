@@ -16,10 +16,13 @@ Work in Chrome on the group admin's computer (Claude in Chrome).
    work-related info that is publicly visible: business or profession. Never use personal details
    (family, health, location, photos, politics). If nothing is public, keep the greeting general.
 
-3. **Hebrew grammar.** Infer gender from the first name only when it is clear
-   ("ברוך הבא" / "ברוכה הבאה"). If unsure, or for several people, use "ברוכים הבאים".
+3. **Language and gender.** Write in the group's language (Hebrew, Arabic or English).
+   Infer gender from the first name only when it is clear:
+   Hebrew "ברוך הבא" / "ברוכה הבאה", Arabic "أهلاً بكَ" / "أهلاً بكِ".
+   If unsure, or for several people, use the plural ("ברוכים הבאים" / "أهلاً بكم").
 
-4. **The image.** By default, attach the fixed welcome card (`assets/welcome.png`, no names on it).
+4. **The image.** By default, attach the fixed welcome card in the group's language
+   (`assets/welcome.png`, `assets/welcome-ar.png` or `assets/welcome-en.png`, no names on it).
    Optional: render a card with the new members' first names:
    ```bash
    npm i playwright
