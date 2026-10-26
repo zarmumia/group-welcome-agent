@@ -1,0 +1,11 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1080}});
+await p.goto('file://'+__dirname+'/card.html');
+await p.evaluate(()=>{document.getElementById('k').innerText='קלוד בלי קוד לעסקים צומחים';
+document.getElementById('h').innerHTML='ברוכים הבאים<br><em>לקהילה!</em>';
+const s=document.createElement('div');s.style.cssText='position:relative;color:#E6F2F1;font-size:44px;margin-top:34px;line-height:1.35';
+s.innerHTML='כאן שואלים, משתפים ולומדים<br>לעבוד עם AI, בלי לכתוב שורת קוד.';document.getElementById('h').after(s);
+const t=document.createElement('div');t.style.cssText='position:relative;display:inline-block;margin-top:40px;background:#D9822B;color:#fff;font-size:38px;font-weight:700;padding:8px 26px;border-radius:12px;align-self:flex-start';
+t.innerText='ופתאום הכול עובד.';s.after(t);
+document.querySelector('.f b').innerText='facebook.com/groups/claudeblikod';});
+await p.waitForTimeout(400);await p.screenshot({path:''+__dirname+'/../assets/welcome.png'});await b.close();})();
