@@ -1,7 +1,8 @@
-// Renders a welcome card (Hebrew RTL or English LTR).
+// Renders a welcome card in Hebrew (RTL), Arabic (RTL) or English (LTR).
 // Usage:
 //   node render.js                                    -> Hebrew card   (assets/welcome.png)
-//   node render.js --lang en --out ../assets/welcome-en.png   -> English card
+//   node render.js --lang en  -> English card (assets/welcome-en.png)
+//   node render.js --lang ar  -> Arabic card  (assets/welcome-ar.png)
 //   node render.js --names "יואב" --greeting "ברוך הבא" --out out.png
 //   node render.js --lang en --names "Dana,Yoav" --out out.png
 const {chromium} = require('playwright');
@@ -24,11 +25,17 @@ const T = {
     sub: 'Ask, share and learn to work with AI<br>without writing a single line of code.',
     slogan: 'And suddenly, everything works.', brand: 'Zarmumia',
   },
+  ar: {
+    greeting: 'أهلاً وسهلاً بكم', toCommunity: 'في مجتمعنا!', and: ' و',
+    group: 'كلود بدون برمجة · للأعمال النامية',
+    sub: 'هنا نسأل ونشارك ونتعلّم العمل<br>مع الذكاء الاصطناعي، بدون برمجة.',
+    slogan: 'وفجأة، كل شيء يعمل.', brand: 'Zarmumia',
+  },
 }[lang];
 
 const names = (get('names', '') || '').split(',').map(s => s.trim()).filter(Boolean);
 const greeting = get('greeting', T.greeting);
-const out = path.resolve(__dirname, get('out', lang === 'en' ? '../assets/welcome-en.png' : '../assets/welcome.png'));
+const out = path.resolve(__dirname, get('out', lang === 'he' ? '../assets/welcome.png' : `../assets/welcome-${lang}.png`));
 const group = get('group', T.group);
 const link = get('link', 'facebook.com/groups/claudeblikod');
 
@@ -39,6 +46,12 @@ const esc = s => s.replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&g
   const p = await b.newPage({viewport: {width: 1080, height: 1080}});
   await p.goto('file://' + __dirname + '/card.html');
   await p.evaluate(({names, greeting, group, link, T, lang}) => {
+    if (lang === 'ar') {
+      const st = document.createElement('style');
+      st.textContent = [400, 700, 800].map(w => `@font-face{font-family:Cairo;font-weight:${w};src:url(cairo-${w}.woff2) format('woff2')}`).join('') +
+        'body{font-family:Cairo,A,sans-serif}';
+      document.head.appendChild(st);
+    }
     if (lang === 'en') {
       document.documentElement.dir = 'ltr';
       document.documentElement.lang = 'en';
@@ -67,7 +80,7 @@ const esc = s => s.replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&g
     const brand = document.querySelector('.f span');
     if (brand) brand.innerText = T.brand;
   }, {names: names.map(esc), greeting, group, link, T, lang});
-  await p.waitForTimeout(400);
+  await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(600);
   await p.screenshot({path: out});
   await b.close();
   console.log(out);
