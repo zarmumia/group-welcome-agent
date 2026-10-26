@@ -1,8 +1,8 @@
 # Group Welcome Agent 👋
 
-**A weekly AI agent that prepares a personal welcome post for new members of a Facebook group, and leaves the final click to a human.**
+**An AI agent that prepares a personal, branded welcome post for new members of a Facebook group, and leaves the final click to a human.**
 
-סוכן AI שבועי שמכין פוסט "ברוכים הבאים" אישי למצטרפים חדשים לקבוצת פייסבוק, ומשאיר את הלחיצה האחרונה לאדם.
+סוכן AI שמכין פוסט "ברוכים הבאים" אישי למצטרפים חדשים לקבוצת פייסבוק, ומשאיר את הלחיצה האחרונה לאדם.
 
 Built by [Zarmumia](https://zarmumia.co.il) for the community [קלוד בלי קוד לעסקים צומחים](https://www.facebook.com/groups/claudeblikod).
 
@@ -18,16 +18,17 @@ So instead of an API, this agent works the way a community manager would: in the
 ## How it works
 
 ```
-Every Sunday morning (scheduled Claude task)
+Every week, or every day (scheduled Claude task)
         │
         ▼
 Opens the group's members page in Chrome (Claude in Chrome)
         │
         ▼
-Finds who joined in the last 7 days ── none? ──► "no new members" notification
+Finds who joined since the last run ── none? ──► "no new members" notification
         │
         ▼
-Writes a welcome post: Hebrew text + tags + branded image
+Reads public business info, writes a personal line per member,
+        │   and renders an image with their names
         │
         ▼
 Stops before "Post" and sends a notification
@@ -35,6 +36,18 @@ Stops before "Post" and sends a notification
         ▼
 The admin reviews and clicks "Post" (≈10 seconds)
 ```
+
+## What it does that Facebook doesn't
+
+| | Facebook's weekly welcome | This agent |
+|---|---|---|
+| Greeting | Fixed English template | Hebrew, with correct gender (ברוך הבא / ברוכה הבאה) |
+| Image | None | Branded image **with the new members' names** |
+| Personal touch | Name tags only | A line per member, based on their public business info |
+| Next step | — | Points each member to an existing post that fits their field |
+| Frequency | Weekly | Weekly for small groups, daily for large ones |
+
+<p align="center"><img src="assets/welcome.png" width="360" alt="welcome image"></p>
 
 ## Human in the loop, on purpose
 
