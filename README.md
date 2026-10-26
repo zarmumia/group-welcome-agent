@@ -48,7 +48,11 @@ The admin reviews and clicks "Post" (≈10 seconds)
 | Icebreaker | — | A rotating question each time, so welcomes never feel copy-pasted |
 | Frequency | Weekly | Weekly for small groups, daily for large ones |
 
-<p align="center"><img src="assets/welcome.png" width="360" alt="welcome image"></p>
+<p align="center">
+  <img src="assets/welcome-en.png" width="340" alt="English welcome card">
+  <img src="assets/welcome.png" width="340" alt="Hebrew welcome card">
+</p>
+<p align="center"><sub>Same card, English (LTR) and Hebrew (RTL)</sub></p>
 
 ## Human in the loop, on purpose
 
@@ -60,14 +64,16 @@ so the last click stays human. The agent does the boring part; the admin keeps t
 | Path | What it is |
 |---|---|
 | `prompt.md` | The instruction the scheduled task runs each week |
-| `assets/welcome.png` | The fixed welcome image (1080×1080) |
+| `assets/welcome.png`, `assets/welcome-en.png` | Fixed welcome cards, Hebrew and English (1080×1080) |
 | `template/` | HTML template + Playwright script to re-render the image in your own brand |
 
 ## Make it yours
 
 1. Edit `template/card.html` (colors, logo, text) and run:
    ```bash
-   npm i playwright && node template/render.js
+   npm i playwright
+   node template/render.js              # Hebrew (RTL)
+   node template/render.js --lang en    # English (LTR)
    ```
 2. Put your group URL and texts in `prompt.md`.
 3. Create a weekly scheduled task in Claude with the prompt, on a computer with Claude in Chrome.
