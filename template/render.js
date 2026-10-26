@@ -1,8 +1,8 @@
 // Renders a personalized welcome image.
 // Usage:
 //   node render.js                                   -> generic image  (assets/welcome.png)
-//   node render.js --names "מאור" --greeting "ברוך הבא" --out ../assets/out.png
-//   node render.js --names "מאור,מיקי"               -> greeting defaults to "ברוכים הבאים"
+//   node render.js --names "יואב" --greeting "ברוך הבא" --out ../assets/out.png
+//   node render.js --names "דנה,יואב"               -> greeting defaults to "ברוכים הבאים"
 const {chromium} = require('playwright');
 const path = require('path');
 
