@@ -33,7 +33,16 @@ Work in Chrome on the group admin's computer (Claude in Chrome).
    - One short, personal line per member, connected to their field, and when possible
      a pointer to an existing post in the group that fits them.
      Example: "יואב, ראיתי שיש לך מאפייה. שווה להציץ בפוסט על תזכורות ללקוחות קבועים 👇"
-   - Last line: "אשמח שתספרו בכמה מילים: מה העסק שלכם, ומה הדבר האחד שהכי הייתם רוצים שירוץ לבד?"
+   - Last line: a rotating icebreaker, so the welcome posts don't get boring.
+     Look at the last welcome post and pick the **next** question in this list (wrap around):
+     1. "מה העסק שלכם, ומה הדבר האחד שהכי הייתם רוצים שירוץ לבד?"
+     2. "איזו משימה בעסק אתם הכי שונאים לעשות?"
+     3. "ניסיתם כבר AI בעסק? מה עבד ומה ממש לא?"
+     4. "כמה זמן ביום הולך לכם על וואטסאפ ומיילים?"
+     5. "מה הכלי שאתם לא מוותרים עליו בעסק?"
+     6. "אם היה לכם עוזר אישי ליום אחד, מה הייתם נותנים לו לעשות?"
+     7. "מה השאלה שהכי הייתם רוצים לשאול את קלוד על העסק שלכם?"
+     8. "מה ההצלחה הקטנה האחרונה שלכם בעסק?"
    - Attach the image.
 
 6. **Stop before publishing.** Do NOT click "Post". Leave the composer open and notify the admin

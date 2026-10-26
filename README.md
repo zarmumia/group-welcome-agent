@@ -45,6 +45,7 @@ The admin reviews and clicks "Post" (≈10 seconds)
 | Image | None | A fixed branded welcome card (optionally with the new members' first names) |
 | Personal touch | Name tags only | A line per member, based on their public business info |
 | Next step | — | Points each member to an existing post that fits their field |
+| Icebreaker | — | A rotating question each time, so welcomes never feel copy-pasted |
 | Frequency | Weekly | Weekly for small groups, daily for large ones |
 
 <p align="center"><img src="assets/welcome.png" width="360" alt="welcome image"></p>
