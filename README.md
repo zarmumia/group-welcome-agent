@@ -17,6 +17,8 @@ So instead of an API, this agent works the way a community manager would: in the
 
 ## How it works
 
+![Demo: the agent prepares the welcome post, stops before "Post", and the admin clicks (fictional names)](assets/demo-en.gif)
+
 ```
 Every week, or every day (scheduled Claude task)
         │
