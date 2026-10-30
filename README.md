@@ -11,7 +11,7 @@ Built by [Zarmumia](https://zarmumia.co.il) for the community [קלוד בלי �
 ## Why
 
 - **Works without the Groups API.** Meta retired it, so Zapier and Make can't post to groups. This agent works in the browser instead, the way a community manager would.
-- **Personal, not generic.** A short line for each new member and a welcome image in your brand, instead of Facebook's built-in list of names.
+- **Personal, not generic.** Each new member greeted by first name, in your group's language, with a welcome image in your brand, instead of Facebook's built-in list of names.
 - **A human clicks Post.** The agent prepares everything and stops. You review, edit if you want, and publish.
 
 **Who it's for:** coaches, course creators and community builders who use a free Facebook group to grow a paid program.
@@ -30,8 +30,8 @@ Opens the group's members page in Chrome (Claude in Chrome)
 Finds who joined since the last run ── none? ──► "no new members" notification
         │
         ▼
-Reads public business info, writes a personal line per member,
-        │   and renders an image with their names
+Writes the new members' first names in the group's language,
+        │   adds a post worth reading, the next icebreaker and the image
         │
         ▼
 Stops before "Post" and sends a notification
@@ -44,10 +44,10 @@ The admin reviews and clicks "Post" (≈10 seconds)
 
 | | Facebook's weekly welcome | This agent |
 |---|---|---|
-| Greeting | Fixed English template | Hebrew, Arabic or English, with correct gender (ברוך הבא / ברוכה הבאה · أهلاً بكَ / أهلاً بكِ) |
+| Greeting | Fixed English template | Hebrew, Arabic or English, with first names in the group's language |
 | Image | None | A fixed branded welcome card (optionally with the new members' first names) |
-| Personal touch | Name tags only | A line per member, based on their public business info |
-| Next step | — | Points each member to an existing post that fits their field |
+| Personal touch | Name tags only | First names in the group's language. No profile visits, no guesses about anyone |
+| Next step | — | Points new members to one existing post worth reading |
 | Icebreaker | — | A rotating question each time, so welcomes never feel copy-pasted |
 | Frequency | Weekly | Weekly for small groups, daily for large ones |
 
