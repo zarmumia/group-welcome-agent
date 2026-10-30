@@ -12,14 +12,13 @@ Work in Chrome on the group admin's computer (Claude in Chrome).
    who joined since the last run (skip admins). Check the latest welcome post so nobody is welcomed twice.
    No new members? Do nothing in the group and notify the admin: "אין מצטרפים חדשים".
 
-2. **Get to know each one (public info only).** Open each new member's public profile and note only
-   work-related info that is publicly visible: business or profession. Never use personal details
-   (family, health, location, photos, politics). If nothing is public, keep the greeting general.
+2. **Names only. No profile visits.** Use only what the members list shows: each member's name.
+   Do not open members' profiles and do not guess anything about them (job, business, gender, age).
+   Members may be business owners, employees or just curious, so never assume.
 
-3. **Language and gender.** Write in the group's language (Hebrew, Arabic or English).
-   Infer gender from the first name only when it is clear:
-   Hebrew "ברוך הבא" / "ברוכה הבאה", Arabic "أهلاً بكَ" / "أهلاً بكِ".
-   If unsure, or for several people, use the plural ("ברוכים הבאים" / "أهلاً بكم").
+3. **Language.** Write in the group's language (Hebrew, Arabic or English).
+   Write each member's first name in the group's language (e.g. "Eleanor" → "אלינור").
+   Address the group in the plural ("ברוכים הבאים", "أهلاً بكم").
 
 4. **The image.** By default, attach the fixed welcome card in the group's language
    (`assets/welcome.png`, `assets/welcome-ar.png` or `assets/welcome-en.png`, no names on it).
@@ -30,26 +29,37 @@ Work in Chrome on the group admin's computer (Claude in Chrome).
    ```
    For several members: `--names "דנה,יואב,נועה"` (greeting defaults to "ברוכים הבאים").
 
-5. **Write the post.** Use the group's "Write welcome post" composer (it tags new members),
-   or a regular post with @tags. Structure:
-   - First line: the greeting.
-   - One short, personal line per member, connected to their field, and when possible
-     a pointer to an existing post in the group that fits them.
-     Example: "יואב, ראיתי שיש לך מאפייה. שווה להציץ בפוסט על תזכורות ללקוחות קבועים 👇"
-   - Last line: a rotating icebreaker, so the welcome posts don't get boring.
-     Look at the last welcome post and pick the **next** question in this list (wrap around):
-     1. "מה העסק שלכם, ומה הדבר האחד שהכי הייתם רוצים שירוץ לבד?"
-     2. "איזו משימה בעסק אתם הכי שונאים לעשות?"
-     3. "ניסיתם כבר AI בעסק? מה עבד ומה ממש לא?"
+5. **Write the post.** Use the group's "Write welcome post" composer (it tags new members);
+   add any new member it missed with an @tag. Then this template:
+
+   ```
+   ברוכים הבאים לקלוד בלי קוד! 👋
+   [tags]
+
+   [first names in Hebrew, e.g. "אלינור, דני ויורם"], איזה כיף שבאתם! ❤️
+   הקהילה הזו היא לכל מי שרוצה שה-AI יעבוד בשבילו, בעסק או בעבודה, בלי להפוך למתכנת.
+
+   למי שרוצה להתחיל: [one existing post in the group worth reading, in one line] 👇
+
+   מכירים מישהו שזה יעניין אותו? תזמינו, ככה זה יהיה שווה יותר לכולנו.
+
+   ושאלה לפתיחה: [icebreaker]
+   ```
+
+   Icebreaker: look at the last welcome post and pick the **next** question in this list (wrap around):
+     1. "מה הדבר האחד בעבודה שלכם שהכי הייתם רוצים שירוץ לבד?"
+     2. "איזו משימה בעבודה אתם הכי שונאים לעשות?"
+     3. "ניסיתם כבר AI בעבודה? מה עבד ומה ממש לא?"
      4. "כמה זמן ביום הולך לכם על וואטסאפ ומיילים?"
-     5. "מה הכלי שאתם לא מוותרים עליו בעסק?"
+     5. "מה הכלי שאתם לא מוותרים עליו בעבודה?"
      6. "אם היה לכם עוזר אישי ליום אחד, מה הייתם נותנים לו לעשות?"
-     7. "מה השאלה שהכי הייתם רוצים לשאול את קלוד על העסק שלכם?"
-     8. "מה ההצלחה הקטנה האחרונה שלכם בעסק?"
-   - Attach the image.
+     7. "מה השאלה שהכי הייתם רוצים לשאול את קלוד?"
+     8. "מה ההצלחה הקטנה האחרונה שלכם בעבודה?"
+
+   Attach the image.
 
 6. **Stop before publishing.** Do NOT click "Post". Leave the composer open and notify the admin
    (in Hebrew): who joined, and that the post is ready for her click.
 
-Rules: never publish on the admin's behalf, never message members, never change group settings,
-never store or repeat personal (non-business) details.
+Rules: never publish on the admin's behalf, never message members, never open members' profiles,
+never change group settings, never store or repeat personal details.
