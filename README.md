@@ -1,8 +1,8 @@
 # Group Welcome Agent 👋
 
-**An AI agent that prepares a personal, branded welcome post for new members of a Facebook group, and leaves the final click to a human.**
+**A personal, branded welcome for every new member of your Facebook group, with a human approving every post.**
 
-סוכן AI שמכין פוסט "ברוכים הבאים" אישי למצטרפים חדשים לקבוצת פייסבוק, ומשאיר את הלחיצה האחרונה לאדם.
+סוכן AI שמכין ברוכים הבאים אישי וממותג לכל מצטרף חדש לקבוצת פייסבוק, ואדם מאשר כל פוסט.
 
 Built by [Zarmumia](https://zarmumia.co.il) for the community [קלוד בלי קוד לעסקים צומחים](https://www.facebook.com/groups/claudeblikod).
 
@@ -10,10 +10,11 @@ Built by [Zarmumia](https://zarmumia.co.il) for the community [קלוד בלי �
 
 ## Why
 
-Facebook's built-in weekly welcome post works, but it's generic: fixed wording, no brand, no image.
-And since Meta retired the Groups API, tools like Zapier or Make can no longer post to groups.
+- **Works without the Groups API.** Meta retired it, so Zapier and Make can't post to groups. This agent works in the browser instead, the way a community manager would.
+- **Personal, not generic.** A short line for each new member and a welcome image in your brand, instead of Facebook's built-in list of names.
+- **A human clicks Post.** The agent prepares everything and stops. You review, edit if you want, and publish.
 
-So instead of an API, this agent works the way a community manager would: in the browser.
+**Who it's for:** coaches, course creators and community builders who use a free Facebook group to grow a paid program.
 
 ## How it works
 
